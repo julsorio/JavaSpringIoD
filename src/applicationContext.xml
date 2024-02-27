@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+    
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:datosGrupo.properties</value>
+            </list>
+        </property>
+        <property name="ignoreResourceNotFound" value="true"/>
+    </bean>
+
+	<bean id="componente1" class="com.accenture.grupos.Componente">
+		<property name="nombre" value="James Hetfield" />
+		<property name="instrumento" value="Voz" />
+	</bean>
+
+	<bean id="componente2" class="com.accenture.grupos.Componente">
+		<property name="nombre" value="Kirk Hammett " />
+		<property name="instrumento" value="Guitarra" />
+	</bean>
+
+	<bean id="componente3" class="com.accenture.grupos.Componente">
+		<property name="nombre" value="Cliff Burton" />
+		<property name="instrumento" value="Bajo" />
+	</bean>
+
+	<bean id="componente4" class="com.accenture.grupos.Componente">
+		<property name="nombre" value="Lars Ulrich" />
+		<property name="instrumento" value="Bateria" />
+	</bean>
+
+	<bean id="grupo" class="com.accenture.grupos.Grupos">
+		<property name="nombre" value="${nombre}" />
+		<property name="creacion" value="${creacion}" />
+		<property name="origen" value="${origen}" />
+		<property name="genero" value="${genero}" />
+		<property name="componentes">
+			<list>
+				<ref bean="componente1" />
+				<ref bean="componente2" />
+				<ref bean="componente3" />
+				<ref bean="componente4" />
+			</list>
+		</property>
+	</bean>
+
+
+</beans>
