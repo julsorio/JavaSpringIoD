@@ -2,18 +2,22 @@ package com.accenture.grupos;
 
 import java.util.List;
 
-public class Grupos {
+/**
+ * Clase que representa un grupo musical
+ * 
+ * @author Andrea Ravagli Castillo
+ */
+public class Grupo {
 	private String nombre;
 	private int creacion;
 	private String origen;
 	private String genero;
 	List<Componente> componentes;
 
-	public Grupos() {
+	public Grupo() {
 	}
 
-	public Grupos(String nombre, int creacion, String origen, String genero, List<Componente> componentes) {
-		super();
+	public Grupo(String nombre, int creacion, String origen, String genero, List<Componente> componentes) {
 		this.nombre = nombre;
 		this.creacion = creacion;
 		this.origen = origen;

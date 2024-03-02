@@ -20,7 +20,7 @@
 	</bean>
 
 	<bean id="componente2" class="com.accenture.grupos.Componente">
-		<property name="nombre" value="Kirk Hammett " />
+		<property name="nombre" value="Kirk Hammett" />
 		<property name="instrumento" value="Guitarra" />
 	</bean>
 
@@ -34,7 +34,7 @@
 		<property name="instrumento" value="Bateria" />
 	</bean>
 
-	<bean id="grupo" class="com.accenture.grupos.Grupos">
+	<bean id="grupo" class="com.accenture.grupos.Grupo">
 		<property name="nombre" value="${nombre}" />
 		<property name="creacion" value="${creacion}" />
 		<property name="origen" value="${origen}" />

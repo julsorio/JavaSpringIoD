@@ -1,5 +1,9 @@
 package com.accenture.grupos;
 
+/**
+ * Clase que representa a un componente del grupo
+ * @author Andrea Ravagli Castillo
+ */
 public class Componente {
 	private String nombre;
 	private String instrumento;
